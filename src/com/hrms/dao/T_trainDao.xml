@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_trainDao">
+	<sql id="con">
+		t_train.id,t_train.train_pxzt,t_train.train_pxnr,t_train.train_pxdd,t_train.train_pxsj 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_train">
+		select <include refid="con"></include> from t_train where  t_train.id=#{id} 
+	</select>
+	<!-- 根据账号获取对象 -->
+	<select id="getByTrain_pxzt" resultType="com.hrms.been.T_train">
+		select <include refid="con"></include> from t_train where t_train.train_pxzt=#{train_pxzt} ;
+	</select>
+	<!-- 根据账号获取对象链表 -->
+	<select id="getListByTrain_pxzt" resultType="com.hrms.been.T_train">
+		select <include refid="con"></include> from t_train where t_train.train_pxzt=#{train_pxzt} ;
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_train">
+		update t_train set 
+			train_pxzt = #{train_pxzt}, train_pxnr = #{train_pxnr}, train_pxdd = #{train_pxdd}, train_pxsj = #{train_pxsj}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_train">
+		insert into t_train (train_pxzt,train_pxnr,train_pxdd,train_pxsj) 
+		values(#{train_pxzt},#{train_pxnr},#{train_pxdd},#{train_pxsj})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_train">
+		delete from t_train where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_train">
+		select <include refid="con"></include> from t_train where 1=1 
+		<if test="train_pxzt!=null and train_pxzt!=''">
+			and train_pxzt like "%"#{train_pxzt}"%" 
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_train.id) from t_train where 1=1 
+		<if test="train_pxzt!=null and train_pxzt!=''">
+			and train_pxzt like "%"#{train_pxzt}"%" 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_train">
+		select <include refid="con"></include> from t_train where 1=1 
+	</select>
+</mapper>

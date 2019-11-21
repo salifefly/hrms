@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_attendanceDao">
+	<sql id="con">
+		t_attendance.id,t_attendance.t_staff_id,t_staff.szh,t_staff.spwd,t_staff.sxm,t_staff.sxb,t_staff.scsrq,t_staff.smz,t_staff.szzmm,t_staff.sxl,t_staff.sjg,t_staff.syx,t_staff.slxdh,t_staff.szy,t_staff.sbyyx,t_staff.swysp,t_staff.sjsjdj,t_staff.sjzzt,t_staff.sygzt,t_staff.t_post_id,t_post.post_gwmc,t_post.t_dept_id,t_dept.dept_bmmc,t_dept.dept_cjsj,t_post.post_sxgz,t_post.post_zsgz,t_post.post_sxjt,t_post.post_zsjt,t_staff.sintime,t_attendance.att_stime,t_attendance.att_sflag,t_attendance.att_etime,t_attendance.att_eflag 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_attendance">
+		select <include refid="con"></include> from t_attendance,t_staff,t_post,t_dept where  t_attendance.id=#{id}  and t_attendance.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+	<!-- 根据员工id和时间段获取对象 -->
+	<select id="getByStaff" resultType="com.hrms.been.T_attendance">
+		select <include refid="con"></include> from t_attendance,t_staff,t_post,t_dept where  t_staff.id=#{t_staff_id} and t_attendance.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id and att_stime between #{stime} and #{etime} 
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_attendance">
+		update t_attendance set 
+			t_staff_id = #{t_staff_id}, att_stime = #{att_stime}, att_sflag = #{att_sflag}, att_etime = #{att_etime}, att_eflag = #{att_eflag}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_attendance">
+		insert into t_attendance (t_staff_id,att_stime,att_sflag,att_etime,att_eflag) 
+		values(#{t_staff_id},#{att_stime},#{att_sflag},#{att_etime},#{att_eflag})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_attendance">
+		delete from t_attendance where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_attendance">
+		select <include refid="con"></include> from t_attendance,t_staff,t_post,t_dept where 1=1  and t_attendance.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_staff_id!=null and t_staff_id!=0">
+			and t_staff_id=#{t_staff_id} 
+		</if>
+		<if test="t_dept_id!=null and t_dept_id!=0">
+			and t_dept_id=#{t_dept_id} 
+		</if>
+		<if test="t_post_id!=null and t_post_id!=0">
+			and t_post_id=#{t_post_id} 
+		</if>
+		<if test="stime!=null and stime!=''">
+			and att_stime &gt;= #{stime}   
+		</if>
+		<if test="etime!=null and etime!=''">
+			and att_stime &lt;= #{etime}   
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_attendance.id) from t_attendance,t_staff,t_post,t_dept where 1=1  and t_attendance.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_staff_id!=null and t_staff_id!=0">
+			and t_staff_id=#{t_staff_id} 
+		</if>
+		<if test="t_dept_id!=null and t_dept_id!=0">
+			and t_dept_id=#{t_dept_id} 
+		</if>
+		<if test="t_post_id!=null and t_post_id!=0">
+			and t_post_id=#{t_post_id} 
+		</if>
+		<if test="stime!=null and stime!=''">
+			and att_stime &gt;= #{stime}   
+		</if>
+		<if test="etime!=null and etime!=''">
+			and att_stime &lt;= #{etime}   
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_attendance">
+		select <include refid="con"></include> from t_attendance,t_staff,t_post,t_dept where 1=1  and t_attendance.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+</mapper>

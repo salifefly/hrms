@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_deptDao">
+	<sql id="con">
+		t_dept.id,t_dept.dept_bmmc,t_dept.dept_cjsj 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_dept">
+		select <include refid="con"></include> from t_dept where  t_dept.id=#{id} 
+	</select>
+	<!-- 根据账号获取对象 -->
+	<select id="getByDept_bmmc" resultType="com.hrms.been.T_dept">
+		select <include refid="con"></include> from t_dept where t_dept.dept_bmmc=#{dept_bmmc} ;
+	</select>
+	<!-- 根据账号获取对象链表 -->
+	<select id="getListByDept_bmmc" resultType="com.hrms.been.T_dept">
+		select <include refid="con"></include> from t_dept where t_dept.dept_bmmc=#{dept_bmmc} ;
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_dept">
+		update t_dept set 
+			dept_bmmc = #{dept_bmmc}, dept_cjsj = #{dept_cjsj}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_dept">
+		insert into t_dept (dept_bmmc,dept_cjsj) 
+		values(#{dept_bmmc},#{dept_cjsj})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_dept">
+		delete from t_dept where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_dept">
+		select <include refid="con"></include> from t_dept where 1=1 
+		<if test="dept_bmmc!=null and dept_bmmc!=''">
+			and dept_bmmc like "%"#{dept_bmmc}"%" 
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_dept.id) from t_dept where 1=1 
+		<if test="dept_bmmc!=null and dept_bmmc!=''">
+			and dept_bmmc like "%"#{dept_bmmc}"%" 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_dept">
+		select <include refid="con"></include> from t_dept where 1=1 
+	</select>
+</mapper>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_rewardsDao">
+	<sql id="con">
+		t_rewards.id,t_rewards.t_staff_id,t_staff.szh,t_staff.spwd,t_staff.sxm,t_staff.sxb,t_staff.scsrq,t_staff.smz,t_staff.szzmm,t_staff.sxl,t_staff.sjg,t_staff.syx,t_staff.slxdh,t_staff.szy,t_staff.sbyyx,t_staff.swysp,t_staff.sjsjdj,t_staff.sjzzt,t_staff.sygzt,t_staff.t_post_id,t_post.post_gwmc,t_post.t_dept_id,t_dept.dept_bmmc,t_dept.dept_cjsj,t_post.post_sxgz,t_post.post_zsgz,t_post.post_sxjt,t_post.post_zsjt,t_staff.sintime,t_rewards.rew_sm,t_rewards.rew_je,t_rewards.rew_sj 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_rewards">
+		select <include refid="con"></include> from t_rewards,t_staff,t_post,t_dept where  t_rewards.id=#{id}  and t_rewards.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_rewards">
+		update t_rewards set 
+			t_staff_id = #{t_staff_id}, rew_sm = #{rew_sm}, rew_je = #{rew_je}, rew_sj = #{rew_sj}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_rewards">
+		insert into t_rewards (t_staff_id,rew_sm,rew_je,rew_sj) 
+		values(#{t_staff_id},#{rew_sm},#{rew_je},#{rew_sj})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_rewards">
+		delete from t_rewards where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_rewards">
+		select <include refid="con"></include> from t_rewards,t_staff,t_post,t_dept where 1=1  and t_rewards.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_staff_id!=null and t_staff_id!=0">
+			and t_staff_id=#{t_staff_id} 
+		</if>
+		<if test="t_dept_id!=null and t_dept_id!=0">
+			and t_dept_id=#{t_dept_id} 
+		</if>
+		<if test="t_post_id!=null and t_post_id!=0">
+			and t_post_id=#{t_post_id} 
+		</if>		
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_rewards.id) from t_rewards,t_staff,t_post,t_dept where 1=1  and t_rewards.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_staff_id!=null and t_staff_id!=0">
+			and t_staff_id=#{t_staff_id} 
+		</if>
+		<if test="t_dept_id!=null and t_dept_id!=0">
+			and t_dept_id=#{t_dept_id} 
+		</if>
+		<if test="t_post_id!=null and t_post_id!=0">
+			and t_post_id=#{t_post_id} 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_rewards">
+		select <include refid="con"></include> from t_rewards,t_staff,t_post,t_dept where 1=1  and t_rewards.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+	<!-- 根据员工id和时间获取信息 -->
+	<select id="getByStaff" resultType="com.hrms.been.T_rewards">
+		select <include refid="con"></include> from t_rewards,t_staff,t_post,t_dept where t_staff.id=#{t_staff_id}  and t_rewards.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id and  rew_sj between #{stime} and #{etime}
+	</select>
+</mapper>

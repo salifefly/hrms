@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_jobDao">
+	<sql id="con">
+		t_job.id,t_job.job_zw,t_job.job_gs,t_job.job_dq,t_job.job_xz,t_job.job_rzyq,t_job.job_zwxx,t_job.job_lxwm 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_job">
+		select <include refid="con"></include> from t_job where  t_job.id=#{id} 
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_job">
+		update t_job set 
+			job_zw = #{job_zw}, job_gs = #{job_gs}, job_dq = #{job_dq}, job_xz = #{job_xz}, job_rzyq = #{job_rzyq}, job_zwxx = #{job_zwxx}, job_lxwm = #{job_lxwm}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_job">
+		insert into t_job (job_zw,job_gs,job_dq,job_xz,job_rzyq,job_zwxx,job_lxwm) 
+		values(#{job_zw},#{job_gs},#{job_dq},#{job_xz},#{job_rzyq},#{job_zwxx},#{job_lxwm})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_job">
+		delete from t_job where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_job">
+		select <include refid="con"></include> from t_job where 1=1 
+		<if test="job_zw!=null and job_zw!=''">
+			and job_zw like "%"#{job_zw}"%" 
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_job.id) from t_job where 1=1 
+		<if test="job_zw!=null and job_zw!=''">
+			and job_zw like "%"#{job_zw}"%" 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_job">
+		select <include refid="con"></include> from t_job where 1=1 
+	</select>
+</mapper>

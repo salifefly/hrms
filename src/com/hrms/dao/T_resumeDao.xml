@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_resumeDao">
+	<sql id="con">
+		t_resume.id,t_resume.res_jlmc,t_resume.res_xm,t_resume.res_xb,t_resume.res_csrq,t_resume.res_mz,t_resume.res_zzmm,t_resume.res_xl,t_resume.res_jg,t_resume.res_yx,t_resume.res_lxdh,t_resume.res_zy,t_resume.res_byyx,t_resume.res_wysp,t_resume.res_jsjdj,t_resume.res_gzjl,t_resume.res_zwpj,t_resume.t_customer_id,t_customer.cus_no,t_customer.cus_pwd 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_resume">
+		select <include refid="con"></include> from t_resume,t_customer where  t_resume.id=#{id}  and t_resume.t_customer_id=t_customer.id 
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_resume">
+		update t_resume set 
+			res_jlmc = #{res_jlmc}, res_xm = #{res_xm}, res_xb = #{res_xb}, res_csrq = #{res_csrq}, res_mz = #{res_mz}, res_zzmm = #{res_zzmm}, res_xl = #{res_xl}, res_jg = #{res_jg}, res_yx = #{res_yx}, res_lxdh = #{res_lxdh}, res_zy = #{res_zy}, res_byyx = #{res_byyx}, res_wysp = #{res_wysp}, res_jsjdj = #{res_jsjdj}, res_gzjl = #{res_gzjl}, res_zwpj = #{res_zwpj}, t_customer_id = #{t_customer_id}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_resume">
+		insert into t_resume (res_jlmc,res_xm,res_xb,res_csrq,res_mz,res_zzmm,res_xl,res_jg,res_yx,res_lxdh,res_zy,res_byyx,res_wysp,res_jsjdj,res_gzjl,res_zwpj,t_customer_id) 
+		values(#{res_jlmc},#{res_xm},#{res_xb},#{res_csrq},#{res_mz},#{res_zzmm},#{res_xl},#{res_jg},#{res_yx},#{res_lxdh},#{res_zy},#{res_byyx},#{res_wysp},#{res_jsjdj},#{res_gzjl},#{res_zwpj},#{t_customer_id})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_resume">
+		delete from t_resume where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_resume">
+		select <include refid="con"></include> from t_resume,t_customer where 1=1  and t_resume.t_customer_id=t_customer.id 
+		<if test="t_customer_id!=null and t_customer_id!=0">
+			and t_customer_id=#{t_customer_id} 
+		</if>
+		<if test="res_jlmc!=null and res_jlmc!=''">
+			and res_jlmc=#{res_jlmc} 
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_resume.id) from t_resume,t_customer where 1=1  and t_resume.t_customer_id=t_customer.id 
+		<if test="t_customer_id!=null and t_customer_id!=0">
+			and t_customer_id=#{t_customer_id} 
+		</if>
+		<if test="res_jlmc!=null and res_jlmc!=''">
+			and res_jlmc=#{res_jlmc} 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_resume">
+		select <include refid="con"></include> from t_resume,t_customer where t_customer.id=#{t_customer_id}  and t_resume.t_customer_id=t_customer.id 
+	</select>
+</mapper>

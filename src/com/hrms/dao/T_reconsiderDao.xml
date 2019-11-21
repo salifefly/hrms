@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrms.dao.T_reconsiderDao">
+	<sql id="con">
+		t_reconsider.id,t_reconsider.t_salary_id,t_salary.t_staff_id,t_staff.szh,t_staff.spwd,t_staff.sxm,t_staff.sxb,t_staff.scsrq,t_staff.smz,t_staff.szzmm,t_staff.sxl,t_staff.sjg,t_staff.syx,t_staff.slxdh,t_staff.szy,t_staff.sbyyx,t_staff.swysp,t_staff.sjsjdj,t_staff.sjzzt,t_staff.sygzt,t_staff.t_post_id,t_post.post_gwmc,t_post.t_dept_id,t_dept.dept_bmmc,t_dept.dept_cjsj,t_post.post_sxgz,t_post.post_zsgz,t_post.post_sxjt,t_post.post_zsjt,t_staff.sintime,t_salary.jbgz,t_salary.zwjt,t_salary.jcgz,t_salary.kqkk,t_salary.yfgz,t_salary.sfgz,t_salary.yf,t_reconsider.rec_mark,t_reconsider.rec_time 
+	</sql>
+	<!-- 根据id获取对象 -->
+	<select id="getById" parameterType="Integer" resultType="com.hrms.been.T_reconsider">
+		select <include refid="con"></include> from t_reconsider,t_salary,t_staff,t_post,t_dept where  t_reconsider.id=#{id}  and t_reconsider.t_salary_id=t_salary.id  and t_salary.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+	<!-- 修改 -->
+	<update id="update" parameterType="com.hrms.been.T_reconsider">
+		update t_reconsider set 
+			t_salary_id = #{t_salary_id}, rec_mark = #{rec_mark}, rec_time = #{rec_time}  
+		where id = #{id}
+	</update>
+	<!-- 添加 -->
+	<insert id="insert" parameterType="com.hrms.been.T_reconsider">
+		insert into t_reconsider (t_salary_id,rec_mark,rec_time) 
+		values(#{t_salary_id},#{rec_mark},#{rec_time})
+	</insert>
+	<!-- 删除 -->
+	<delete id="delete" parameterType="com.hrms.been.T_reconsider">
+		delete from t_reconsider where id=#{id}
+	</delete>
+	<!-- 根据不同条件，获取信息 -->
+	<select id="getPage" resultType="com.hrms.been.T_reconsider">
+		select <include refid="con"></include> from t_reconsider,t_salary,t_staff,t_post,t_dept where 1=1  and t_reconsider.t_salary_id=t_salary.id  and t_salary.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_salary_id!=null and t_salary_id!=0">
+			and t_salary_id=#{t_salary_id} 
+		</if>
+		limit #{sindex},#{scount}
+	</select>
+	<!-- 获取总条数 -->
+	<select id="getAllCount" resultType="int">
+		select count(t_reconsider.id) from t_reconsider,t_salary,t_staff,t_post,t_dept where 1=1  and t_reconsider.t_salary_id=t_salary.id  and t_salary.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+		<if test="t_salary_id!=null and t_salary_id!=0">
+			and t_salary_id=#{t_salary_id} 
+		</if>
+	</select>
+	<!-- 获取全部信息信息 -->
+	<select id="getAll" resultType="com.hrms.been.T_reconsider">
+		select <include refid="con"></include> from t_reconsider,t_salary,t_staff,t_post,t_dept where 1=1  and t_reconsider.t_salary_id=t_salary.id  and t_salary.t_staff_id=t_staff.id  and t_staff.t_post_id=t_post.id  and t_post.t_dept_id=t_dept.id 
+	</select>
+</mapper>
