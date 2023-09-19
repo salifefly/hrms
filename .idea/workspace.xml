@@ -1,17 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="hrms:Web exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c652106-75b6-4471-8bf2-da414f5b9401" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/classes/" />
-    <ignored path="$PROJECT_DIR$/WebRoot/WEB-INF/classes/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="8c652106-75b6-4471-8bf2-da414f5b9401" name="Default Changelist" comment="change the directions">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_attendance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_attendance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_dept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_dept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_reconsider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_reconsider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_res_cus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_res_cus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_rewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_rewards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_salary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/been/T_train_emp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/been/T_train_emp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_attendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_attendanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_customerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_customerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_deptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_deptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_jobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_jobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_postController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_postController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_reconsiderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_reconsiderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_res_cusController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_res_cusController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_resumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_resumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_rewardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_rewardsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_salaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_salaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_staffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_staffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_trainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_trainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/controller/T_train_empController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/controller/T_train_empController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_adminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_adminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_adminDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_adminDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_attendanceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_attendanceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_attendanceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_attendanceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_customerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_customerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_customerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_customerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_deptDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_deptDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_deptDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_deptDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_jobDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_jobDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_jobDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_jobDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_postDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_postDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_postDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_postDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_reconsiderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_reconsiderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_reconsiderDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_reconsiderDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_res_cusDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_res_cusDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_res_cusDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_res_cusDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_resumeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_resumeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_resumeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_resumeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_rewardsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_rewardsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_rewardsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_rewardsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_salaryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_salaryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_salaryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_salaryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_staffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_staffDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_staffDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_staffDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_trainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_trainDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_trainDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_trainDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_train_empDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_train_empDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/dao/T_train_empDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/dao/T_train_empDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_adminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_adminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_attendanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_attendanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_customerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_customerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_deptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_deptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_jobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_jobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_postService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_postService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_reconsiderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_reconsiderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_res_cusService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_res_cusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_resumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_resumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_rewardsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_rewardsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_salaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_salaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_staffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_staffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_trainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_trainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/T_train_empService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/T_train_empService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_adminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_adminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_attendanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_attendanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_customerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_customerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_deptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_deptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_jobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_jobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_postServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_postServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_reconsiderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_reconsiderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_res_cusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_res_cusServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_resumeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_resumeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_rewardsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_rewardsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_salaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_salaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_staffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_staffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_trainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_trainServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hrms/service/impl/T_train_empServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hrms/service/impl/T_train_empServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/springmvc-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc-config.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
@@ -19,6 +123,7 @@
     <option name="width" value="1440" />
     <option name="height" value="774" />
   </component>
+  <component name="ProjectId" id="2VayMaqUNqyDCoqxOnNkhCPT6tA" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -62,29 +167,44 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WebRoot" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.16292799" />
+    <property name="project.structure.side.proportion" value="0.18906942" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\hrms\src\main\resources" />
+      <recent name="C:\Users\admin\Desktop\hrms\src\main\java" />
+    </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -98,6 +218,7 @@
       <workItem from="1565927883083" duration="171000" />
       <workItem from="1572707113855" duration="33000" />
       <workItem from="1572707258038" duration="62000" />
+      <workItem from="1695088440476" duration="1764000" />
     </task>
     <servers />
   </component>
@@ -138,7 +259,22 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change the directions" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the directions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/db.properties">
